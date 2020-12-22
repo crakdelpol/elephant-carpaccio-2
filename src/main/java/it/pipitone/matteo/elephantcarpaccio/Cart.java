@@ -1,6 +1,7 @@
 package it.pipitone.matteo.elephantcarpaccio;
 
 import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.util.HashMap;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -25,7 +26,7 @@ public class Cart {
             total.set(add);
         });
 
-        BigDecimal result = discounts.calculateDiscount(total.get()).setScale(2);
+        BigDecimal result = discounts.calculateDiscount(total.get()).setScale(2, RoundingMode.HALF_UP);
         printer.print(result.toPlainString());
 
     }

@@ -4,7 +4,7 @@ package it.pipitone.matteo.elephantcarpaccio;
 public class ElephantCarpaccioApplication {
 
     private static final Discounts discounts = new FixedDiscounts();
-    private static final ConsolePrinter printer = new ConsolePrinter();
+    private static final Printer printer = new ConsolePrinter();
     private static final Cart cart = new Cart(printer, discounts);
 
     public static void main(String[] args) {

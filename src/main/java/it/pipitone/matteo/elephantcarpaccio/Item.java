@@ -1,9 +1,7 @@
 package it.pipitone.matteo.elephantcarpaccio;
 
-import java.math.BigDecimal;
-import java.math.RoundingMode;
-
 public class Item {
+
     private final Price price;
     private final State state;
 
@@ -14,6 +12,6 @@ public class Item {
     }
 
     public Price calculateTotalWithTax() {
-        return price.multiply(BigDecimal.ONE.add(state.retrieveTaxes().divide(new BigDecimal("100"), 3, RoundingMode.HALF_UP)));
+        return state.calculateGrossPrice(price);
     }
 }

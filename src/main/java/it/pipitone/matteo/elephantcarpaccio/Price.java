@@ -2,22 +2,24 @@ package it.pipitone.matteo.elephantcarpaccio;
 
 import java.math.BigDecimal;
 
-public class Price extends BigDecimal {
+public class Price {
+
+    private final BigDecimal value;
 
     public Price(String price) {
-        super(price);
+        this.value= new BigDecimal(price);
     }
 
     public Price(BigDecimal price) {
-        super(String.valueOf(price));
+        this.value = price;
     }
 
     public BigDecimal multiply(NumberOfItems numberOfItems) {
-        return super.multiply(BigDecimal.valueOf(numberOfItems.number));
+        return value.multiply(BigDecimal.valueOf(numberOfItems.number));
     }
 
     public Price multiply(BigDecimal taxes) {
-        return valueOf(super.multiply(taxes));
+        return valueOf(value.multiply(taxes));
     }
 
     public static Price valueOf(BigDecimal price) {

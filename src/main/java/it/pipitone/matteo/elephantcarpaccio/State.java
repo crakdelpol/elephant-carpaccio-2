@@ -1,6 +1,7 @@
 package it.pipitone.matteo.elephantcarpaccio;
 
 import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -12,7 +13,6 @@ public class State {
         put("TX", new BigDecimal("6.25"));
         put("AL", new BigDecimal("4.00"));
         put("CA", new BigDecimal("8.25"));
-
     }};
 
     private final String stateSymbol;
@@ -21,7 +21,11 @@ public class State {
         this.stateSymbol = stateSymbol;
     }
 
-    public BigDecimal retrieveTaxes() {
-        return taxes.get(stateSymbol);
+    public Price calculateGrossPrice(Price price) {
+        return price.multiply(evaluatePercentTaxes());
+    }
+
+    private BigDecimal evaluatePercentTaxes() {
+        return taxes.get(stateSymbol).divide(new BigDecimal("100"), 6, RoundingMode.HALF_UP);
     }
 }
