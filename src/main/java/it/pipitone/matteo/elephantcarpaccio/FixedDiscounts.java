@@ -32,6 +32,7 @@ public class FixedDiscounts implements Discounts{
         AtomicBoolean enter = new AtomicBoolean(false);
 
         discounts.keySet().forEach(bigDecimal -> {
+
             if(previous.get().compareTo(BigDecimal.ZERO) == 0){
                 previous.set(bigDecimal);
             }

@@ -10,9 +10,7 @@ public class ElephantCarpaccioApplication {
     public static void main(String[] args) {
 
         NumberOfItems numberOfItems = new NumberOfItems(args[0]);
-
         Price price = new Price(args[1]);
-
         State state = new State(args[2]);
 
         Item item = new Item(price, state);
