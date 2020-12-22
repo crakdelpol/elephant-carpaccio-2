@@ -1,4 +1,4 @@
-package it.pipitone.matteo.elephantcarpaccio2;
+package it.pipitone.matteo.elephantcarpaccio;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;

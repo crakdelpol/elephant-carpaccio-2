@@ -1,4 +1,4 @@
-package it.pipitone.matteo.elephantcarpaccio2;
+package it.pipitone.matteo.elephantcarpaccio;
 
 import org.junit.jupiter.api.Test;
 

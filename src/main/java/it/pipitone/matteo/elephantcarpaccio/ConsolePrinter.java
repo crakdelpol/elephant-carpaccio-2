@@ -1,4 +1,4 @@
-package it.pipitone.matteo.elephantcarpaccio2;
+package it.pipitone.matteo.elephantcarpaccio;
 
 public class ConsolePrinter implements Printer {
     @Override

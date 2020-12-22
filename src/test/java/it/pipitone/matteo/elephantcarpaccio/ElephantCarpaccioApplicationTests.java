@@ -1,10 +1,10 @@
-package it.pipitone.matteo.elephantcarpaccio2;
+package it.pipitone.matteo.elephantcarpaccio;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class ElephantCarpaccio2ApplicationTests {
+class ElephantCarpaccioApplicationTests {
 
     @Test
     void contextLoads() {

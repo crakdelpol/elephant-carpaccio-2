@@ -1,7 +1,7 @@
-package it.pipitone.matteo.elephantcarpaccio2;
+package it.pipitone.matteo.elephantcarpaccio;
 
 
-public class ElephantCarpaccio2Application {
+public class ElephantCarpaccioApplication {
 
     private static final Discounts discounts = new FixedDiscounts();
     private static final ConsolePrinter printer = new ConsolePrinter();
